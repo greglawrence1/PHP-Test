@@ -13,9 +13,13 @@
              ('$email', '$DOB', '$password')   
         ";
 
-       
+        //echo $query;
+       //exit;
         mysqli_query($connection, $query);
+        if(is_Numeric(mysqli_insert_id($connection))){
         header('location:form.php');
+        }
+            //echo "Records inserted successfully. Last inserted ID is: " . $last_id;
     }
     
 ?>

@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
+<body style="background-color:lightblue">
     <h1>Raffle Form Registration</h1>
 
     <form action="process_form.php" method="POST">
         <div class="container p-5 my-5 bg-primary text-white">
         <span class="input-group-addon" id="sizing-addon1">@</span>
         <label for="email" class="form-label">Email:</label>
-        <input type="email" class="form-control" id="email" name="email">
+        <input type="text" class="form-control" id="email" name="email">
+        <div id="emailError" class="alert"></div>
         <label for="DOB" class="form-label">Date of Birth:</label>
         <input type="text" class="form-control" id="DOB" name="DOB">
         <label for="password" class="form-label">Password:</label>
@@ -24,5 +25,6 @@
     </div>
     </form>
    
+    <script src="my.js"></script>
 </body>
 </html>

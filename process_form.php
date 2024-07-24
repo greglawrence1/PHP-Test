@@ -15,8 +15,6 @@
 
        
         mysqli_query($connection, $query);
-
-
         header('location:form.php');
     }
     

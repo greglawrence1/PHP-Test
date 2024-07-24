@@ -12,11 +12,11 @@
              ('$email', '$password')   
         ";
 
-        echo $query;
-        exit();
-        //mysqli_query($connection, $query);
+       
+        mysqli_query($connection, $query);
 
 
         header('location:form.php');
     }
+    
 ?>

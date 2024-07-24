@@ -10,7 +10,7 @@
 <body>
     <h1>Raffle Form Registration</h1>
 
-    <form action="PHP_Test/process_form.php" method="POST">
+    <form action="process_form.php" method="POST">
         <div class="container p-5 my-5 bg-primary text-white">
         <span class="input-group-addon" id="sizing-addon1">@</span>
         <label for="email" class="form-label">Email:</label>
@@ -21,5 +21,6 @@
         <button type="submit" name="submit" id="submit" class="btn btn-light">Submit</button>
     </div>
     </form>
+   
 </body>
 </html>

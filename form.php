@@ -9,12 +9,17 @@
 
 </head>
 <body>
-    <h1>Raffle Form</h1>
+    <h1>Raffle Form Registration</h1>
 
     <form action="/process_form.php" method="POST">
         <div class="container p-5 my-5 bg-primary text-white">
+        <span class="input-group-addon" id="sizing-addon1">@</span>
         <label for="email" class="form-label">Email:</label>
         <input type="email" class="form-control" id="email" name="email">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password" name="password">
+    <br>
+        <button type="submit" class="btn btn-light">Submit</button>
     </div>
     </form>
 </body>

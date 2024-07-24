@@ -15,6 +15,8 @@
         <span class="input-group-addon" id="sizing-addon1">@</span>
         <label for="email" class="form-label">Email:</label>
         <input type="email" class="form-control" id="email" name="email">
+        <label for="DOB" class="form-label">Date of Birth:</label>
+        <input type="text" class="form-control" id="DOB" name="DOB">
         <label for="password" class="form-label">Password:</label>
         <input type="password" class="form-control" id="password" name="password">
     <br>

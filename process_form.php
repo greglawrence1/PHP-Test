@@ -4,12 +4,13 @@
 
     if(isset($_POST["submit"])){
         $email = $_POST["email"];
+        $DOB = $_POST["DOB"];
         $password = $_POST["password"];
 
         $query = "INSERT INTO users
-             (Email, UserPassword)
+             (Email, DOB , UserPassword)
              VALUES
-             ('$email', '$password')   
+             ('$email', '$DOB', '$password')   
         ";
 
        

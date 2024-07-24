@@ -1,3 +1,7 @@
+function dateFormat(date) {
+    var DatePattern = /^\d{4}-\d{2}-\d{2}$/;
+    return DatePattern.test(date)
+}
 
 function validateForm(event) {
     var emailField = document.getElementById("email");
@@ -30,13 +34,21 @@ function validateForm(event) {
         DOBError.style.display = "block";
         formValid = false;
     }
+    
+    if (!dateFormat(DOBField.value)) {
+        DOBError.innerHTML = "Invalid DOB! Please enter in the format year-month-date for example 2000-12-03.";
+        DOBError.className = "alert alert-danger";
+        DOBError.style.display = "block";
+        formValid = false;
+    }
 
-    if (passwordField.value === "") {
-        passwordError.innerHTML = "Invalid Password! Please try again.";
+    if (passwordField.value.length > 30 || passwordField.value.length < 5) {
+        passwordError.innerHTML = "Invalid Password! Must be between 5 and 30 characters.";
         passwordError.className = "alert alert-danger";
         passwordError.style.display = "block";
         formValid = false;
     }
+ 
 
     if(!formValid){
         event.preventDefault();

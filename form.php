@@ -18,8 +18,10 @@
         <div id="emailError" class="alert"></div>
         <label for="DOB" class="form-label">Date of Birth:</label>
         <input type="text" class="form-control" id="DOB" name="DOB">
+        <div id="DOBError" class="alert"></div>
         <label for="password" class="form-label">Password:</label>
         <input type="password" class="form-control" id="password" name="password">
+        <div id="passwordError" class="alert"></div>
     <br>
         <button type="submit" name="submit" id="submit" class="btn btn-light">Submit</button>
     </div>

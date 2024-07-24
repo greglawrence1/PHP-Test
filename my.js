@@ -9,13 +9,17 @@ function validateForm(event) {
         emailError.innerHTML = "Invalid Email! Please try again.";
         emailError.className = "alert alert-danger";
         emailError.style.display = "block";
-        event.preventDefault(); 
+        formValid = false;
     }
-    if (!emailField.value.includes("@") && !emailField.value === "") {
-        emailError.innerHTML = "Invalid Email! Please enter an @";
+    if (emailField.value.includes("@") && emailField.value.length == 1) {
+        emailError.innerHTML = "Invalid Email! Please enter a longer email";
         emailError.className = "alert alert-danger";
         emailError.style.display = "block";
-        event.preventDefault(); 
+        formValid = false;
+    }
+
+    if(!formValid){
+        event.preventDefault();
     }
 }
 

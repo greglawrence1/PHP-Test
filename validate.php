@@ -16,9 +16,11 @@ class Validator {
 
     public static function validatePassword($password){
        
-        $pass = ($password);
+        if(strlen($password) > 5 && strlen($password) <  30){
 
-        return $pass;
+        return $password;
+        
+        }
     }
 }
 

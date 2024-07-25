@@ -24,7 +24,7 @@
             $user = $stmt->fetch();
             if ($user) {
 
-                echo "email duplicate";
+                echo "email already exists";
             } else {   
 
         $sql = "INSERT INTO users

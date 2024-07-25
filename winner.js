@@ -93,3 +93,48 @@ timeline.add({
   easing: 'easeInOutSine',
 }, '-=250');
 
+
+
+var id = null;
+var elem = document.getElementById("myAnimation");
+var pos = 0;
+
+function move() {
+  if (pos === 350) {
+    pos = 0; 
+  } else {
+    pos++;
+    elem.style.top = pos + 'px'; 
+    elem.style.left = pos + 'px'; 
+  }
+}
+
+function startAnimation() {
+  clearInterval(id);
+  id = setInterval(move, 10);
+}
+
+
+var id1 = null;
+var elem1 = document.getElementById("myAnimation1");
+var pos1 = 0;
+
+function move1() {
+  if (pos1 === 350) {
+    pos1 = 0; 
+  } else {
+    pos1++;
+    elem1.style.top = pos1 + 'px'; 
+    elem1.style.right = pos1 + 'px'; 
+  }
+}
+
+function startAnimation1() {
+  clearInterval(id1);
+  id1 = setInterval(move1, 10);
+}
+
+window.onload = function() {
+  startAnimation();
+  startAnimation1();
+};

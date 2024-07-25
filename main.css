@@ -64,3 +64,26 @@
     z-index: -5;
   }
   
+
+  #myContainer {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    
+  }
+  
+  #myAnimation {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url("celebration.jpg");
+  }
+
+  #myAnimation1 {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url("celebration.jpg");
+  }

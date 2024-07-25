@@ -9,6 +9,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
+
+<div id="Container">
+    <div id="myAnimation"></div>
+    <div id="myAnimation1"></div>
+</div>
+
     <h1>YOU ARE A WINNER</h1>
 
     <!-- specify a viewBox larger than the actual shape, to allocate space for the bomb as it gets scaled beyond its normal size -->

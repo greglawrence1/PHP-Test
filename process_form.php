@@ -18,7 +18,15 @@
         $DOBValid = Validator::validateDOB($DOB);
         $passwordValid = Validator::validatePassword($password);
         if($emailValid && $DOBValid && $passwordValid){
-         
+
+            $stmt = $connection->prepare("SELECT * FROM users WHERE Email=?");
+            $stmt->execute([$emailValid]); 
+            $user = $stmt->fetch();
+            if ($user) {
+
+                echo "email duplicate";
+            } else {   
+
         $sql = "INSERT INTO users
              (Email, DOB , UserPassword)
              VALUES
@@ -44,10 +52,7 @@
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($connection);
         }
     }
-    else{
-        echo "failed";
-    }
-    
+}
     }
     
 ?>

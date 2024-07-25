@@ -13,6 +13,8 @@
         $email = trim($_POST["email"]);
         $DOB = trim($_POST["DOB"]);
         $password = trim($_POST["password"]);
+        $firstname = trim($_POST["firstname"]);
+        $surname = trim($_POST["surname"]);
 
         $emailValid = Validator::validateEmail($email);
         $DOBValid = Validator::validateDOB($DOB);
@@ -28,9 +30,9 @@
             } else {   
 
         $sql = "INSERT INTO users
-             (Email, DOB , UserPassword)
+             (Email, DOB , UserPassword, Firstname, Surname)
              VALUES
-             ('$emailValid', '$DOBValid', '$passwordValid')   
+             ('$emailValid', '$DOBValid', '$passwordValid', '$firstname', '$surname')   
         ";
 
         //echo $query;

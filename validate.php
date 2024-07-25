@@ -12,6 +12,7 @@ class Validator {
     }
 
     public static function validateDOB($DOB){
+        
         $sanitiseDOB = filter_var($DOB, FILTER_SANITIZE_NUMBER_INT);
 
         return $sanitiseDOB;

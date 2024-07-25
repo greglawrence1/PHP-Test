@@ -30,11 +30,31 @@ function validateForm(event) {
         firstNameError.style.display = "block";
         formValid = false;
     }
+    else if(firstNameField.value !== ""){
+        let str = firstNameField.value;
+        let regex = /^[a-zA-Z]+$/;
+        if(regex.test(str) === false){
+            firstNameError.innerHTML = "Invalid Firstname! Can Only Contain Letters.";
+            firstNameError.className = "alert alert-danger";
+            firstNameError.style.display = "block";
+            formValid = false;
+        }
+    }
     if (surnameField.value === "") {
         surnameError.innerHTML = "Invalid Surname! Please try again.";
         surnameError.className = "alert alert-danger";
         surnameError.style.display = "block";
         formValid = false;
+
+    }else if(surnameField.value !== ""){
+        let str1 = surnameField.value;
+        let regex1 = /^[a-zA-Z]+$/;
+        if(regex1.test(str1) === false){
+            surnameError.innerHTML = "Invalid Surname! Can Only Contain Letters.";
+            surnameError.className = "alert alert-danger";
+            surnameError.style.display = "block";
+            formValid = false;
+        }
     }
 
     if (emailField.value === "") {

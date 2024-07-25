@@ -10,14 +10,15 @@
     }
 
     if(isset($_POST["submit"])){
-        $email = $_POST["email"];
-        $DOB = $_POST["DOB"];
-        $password = $_POST["password"];
-        if(Validator::validateEmail($email)){
+        $email = trim($_POST["email"]);
+        $DOB = trim($_POST["DOB"]);
+        $password = trim($_POST["password"]);
+        if(Validator::validateEmail($email) && Validator::validateDOB($DOB) && Validator::validatePassword($password)){
+        $pass = password_hash($password, PASSWORD_DEFAULT);    
         $sql = "INSERT INTO users
              (Email, DOB , UserPassword)
              VALUES
-             ('$email', '$DOB', '$password')   
+             ('$email', '$DOB', '$pass')   
         ";
 
         //echo $query;

@@ -18,12 +18,11 @@
         $DOBValid = Validator::validateDOB($DOB);
         $passwordValid = Validator::validatePassword($password);
         if($emailValid && $DOBValid && $passwordValid){
-        $pass = password_hash($password, PASSWORD_DEFAULT);
-        $email = strtolower($email);    
+         
         $sql = "INSERT INTO users
              (Email, DOB , UserPassword)
              VALUES
-             ('$email', '$DOB', '$pass')   
+             ('$emailValid', '$DOBValid', '$passwordValid')   
         ";
 
         //echo $query;

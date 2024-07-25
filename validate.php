@@ -5,7 +5,10 @@ class Validator {
 
         $sanitise = filter_var($email, FILTER_SANITIZE_EMAIL);
 
-        return filter_var($sanitise, FILTER_VALIDATE_EMAIL);
+        $email2 = filter_var($sanitise, FILTER_VALIDATE_EMAIL);
+        $email2 = strtolower($email2);
+
+        return $email2;
     }
 
     public static function validateDOB($DOB){
@@ -18,6 +21,7 @@ class Validator {
        
         if(strlen($password) > 5 && strlen($password) <  30){
 
+        $password = password_hash($password, PASSWORD_DEFAULT);
         return $password;
 
         }

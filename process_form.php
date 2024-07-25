@@ -14,7 +14,8 @@
         $DOB = trim($_POST["DOB"]);
         $password = trim($_POST["password"]);
         if(Validator::validateEmail($email) && Validator::validateDOB($DOB) && Validator::validatePassword($password)){
-        $pass = password_hash($password, PASSWORD_DEFAULT);    
+        $pass = password_hash($password, PASSWORD_DEFAULT);
+        $email = strtolower($email);    
         $sql = "INSERT INTO users
              (Email, DOB , UserPassword)
              VALUES

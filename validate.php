@@ -19,7 +19,7 @@ class Validator {
         if(strlen($password) > 5 && strlen($password) <  30){
 
         return $password;
-        
+
         }
     }
 }

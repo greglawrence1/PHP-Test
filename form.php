@@ -16,7 +16,7 @@
         <label for="email" class="form-label">Email:</label>
         <input type="text" class="form-control" id="email" name="email">
         <div id="emailError" class="alert"></div>
-        <label for="DOB" class="form-label">Date of Birth:</label>
+        <label for="DOB" class="form-label">Date of Birth Format: Year-Month-Day:</label>
         <input type="text" class="form-control" id="DOB" name="DOB">
         <div id="DOBError" class="alert"></div>
         <label for="password" class="form-label">Password:</label>

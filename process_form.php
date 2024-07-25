@@ -1,12 +1,13 @@
 <?php
  
+ include "connection.php";
+ include "validate.php";
+
     function LastDigit($number){
         $split = str_split($number);
         $last = end($split);
         return $last;
     }
-
-    include "connection.php";
 
     if(isset($_POST["submit"])){
         $email = $_POST["email"];

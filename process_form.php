@@ -13,7 +13,11 @@
         $email = trim($_POST["email"]);
         $DOB = trim($_POST["DOB"]);
         $password = trim($_POST["password"]);
-        if(Validator::validateEmail($email) && Validator::validateDOB($DOB) && Validator::validatePassword($password)){
+
+        $emailValid = Validator::validateEmail($email);
+        $DOBValid = Validator::validateDOB($DOB);
+        $passwordValid = Validator::validatePassword($password);
+        if($emailValid && $DOBValid && $passwordValid){
         $pass = password_hash($password, PASSWORD_DEFAULT);
         $email = strtolower($email);    
         $sql = "INSERT INTO users

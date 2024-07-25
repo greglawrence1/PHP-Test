@@ -4,6 +4,13 @@ function dateFormat(date) {
 }
 
 function validateForm(event) {
+    
+    var formValid = true;
+
+    var firstNameField = document.getElementById("firstname");
+    var firstNameError = document.getElementById("firstnameError");
+    var surnameField = document.getElementById("surname");
+    var surnameError = document.getElementById("surnameError");
     var emailField = document.getElementById("email");
     var emailError = document.getElementById("emailError");
     var DOBField = document.getElementById("DOB");
@@ -11,9 +18,24 @@ function validateForm(event) {
     var passwordField = document.getElementById("password");
     var passwordError = document.getElementById("passwordError");
 
+    firstNameError.style.display = "none";
+    surnameError.style.display = "none";
     emailError.style.display = "none";
     DOBError.style.display = "none";
     passwordError.style.display = "none";
+
+    if (firstNameField.value === "") {
+        firstNameError.innerHTML = "Invalid Firstname! Please try again.";
+        firstNameError.className = "alert alert-danger";
+        firstNameError.style.display = "block";
+        formValid = false;
+    }
+    if (surnameField.value === "") {
+        surnameError.innerHTML = "Invalid Surname! Please try again.";
+        surnameError.className = "alert alert-danger";
+        surnameError.style.display = "block";
+        formValid = false;
+    }
 
     if (emailField.value === "") {
         emailError.innerHTML = "Invalid Email! Please try again.";

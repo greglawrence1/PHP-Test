@@ -12,17 +12,24 @@
 
     <form action="process_form.php" method="POST">
         <div class="container p-5 my-5 bg-primary text-white">
+
         <label for="firstname" class="form-label">Firstname:</label>
         <input type="text" class="form-control" id="firstname" name="firstname">
+        <div id="firstnameError" class="alert"></div>
+
         <label for="surname" class="form-label">Surname:</label>
         <input type="text" class="form-control" id="surname" name="surname">
+        <div id="surnameError" class="alert"></div>
+
         <span class="input-group-addon" id="sizing-addon1">@</span>
         <label for="email" class="form-label">Email:</label>
         <input type="text" class="form-control" id="email" name="email">
         <div id="emailError" class="alert"></div>
+
         <label for="DOB" class="form-label">Date of Birth Format: Year-Month-Day:</label>
         <input type="text" class="form-control" id="DOB" name="DOB">
         <div id="DOBError" class="alert"></div>
+
         <label for="password" class="form-label">Password:</label>
         <input type="password" class="form-control" id="password" name="password">
         <div id="passwordError" class="alert"></div>

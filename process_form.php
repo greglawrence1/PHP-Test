@@ -13,7 +13,7 @@
         $email = $_POST["email"];
         $DOB = $_POST["DOB"];
         $password = $_POST["password"];
-
+        if(Validator::validateEmail($email)){
         $sql = "INSERT INTO users
              (Email, DOB , UserPassword)
              VALUES
@@ -38,7 +38,10 @@
         } else{
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($connection);
         }
-        
+    }
+    else{
+        echo "failed";
+    }
     
     }
     

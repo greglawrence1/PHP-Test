@@ -10,6 +10,9 @@
 
     <h1>You have lost</h1>
 <br>
-    <p>Would you like to <a href="form.php" id="style-2" data-replace="Try Again?"><span>Try Again?</span></a></p>
+<p>Would you like to</p>
+
+     <a href="form.php" id="style-2" data-replace="Try Again?"><span>Try Again?</span></a>
+   
 </body>
 </html>

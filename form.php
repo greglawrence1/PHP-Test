@@ -41,7 +41,7 @@
                             <div id="passwordError" class="alert"></div>
                         </div>
                         <div class="group">
-                            <button type="submit" name="submit" id="submit" class="button">Submit</button>
+                            <button style="cursor:wait" type="submit" name="submit" id="submit" class="button">Submit</button>
                         </div>
                     </form>
                 </div>

@@ -48,7 +48,7 @@
             if(LastDigit($last_id) == 0 || LastDigit($last_id) == 5)
                 header('location:congrats.php');
             else{
-                header('location:form.php');
+                header('location:loser.php');
             }
         } else{
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($connection);

@@ -106,10 +106,9 @@ function validateForm(event) {
             DOBError.style.display = "block";
             formValid = false;
         }
+
     }
     
-   
-
     if (passwordField.value.length > 30 || passwordField.value.length < 5) {
         passwordError.innerHTML = "Invalid Password! Must be between 5 and 30 characters.";
         passwordError.className = "alert alert-danger";
